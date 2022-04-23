@@ -11,6 +11,9 @@ const Manager = require('./lib/Manager');
 // team array
 const team = [];
 
+// link to page creation
+const generateTeam = require('./src/template');
+
 //WHEN I start the application
 //THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
 //function to start of manager prompts
