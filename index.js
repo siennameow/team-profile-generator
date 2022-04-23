@@ -32,21 +32,60 @@ const addManager = () => {
             type: 'input',
             name: 'name',
             message: 'What is the team manager\'s name?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log ("Please enter the manager's name!");
+                    return false; 
+                }
+            }
         },
         {
             type: 'input',
             name: 'id',
             message: 'What is the team manager\'s id?',
+            validate: idInput => {
+                if (!idInput) {
+                    console.log ("Please enter the manager's ID!");
+                    return false; 
+                }  else if  (isNaN(idInput)) {
+                    console.log ("ID should be a number!")
+                    return false; 
+                } else {
+                    return true;
+                }
+            }
         },
         {
             type: 'input',
             name: 'email',
             message: 'What is the team manager\'s email?',
+            validate: email => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+                if (valid) {
+                    return true;
+                } else {
+                    console.log ('Please enter a valid email!')
+                    return false; 
+                }
+            }
         },
         {
             type: 'input',
             name: 'officeNumber',
             message: 'What is the team manager\'s office number?',
+            validate: numberInput => {
+                if (!numberInput) {
+                    console.log ("Please enter the manager's office number!");
+                    return false; 
+                }  else if  (isNaN(numberInput)) {
+                    console.log ("office number should be a number!")
+                    return false; 
+                } else {
+                    return true;
+                }
+            }
         },
         //WHEN I enter the team manager’s name, employee ID, email address, and office number
         //THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
@@ -84,21 +123,56 @@ const addEngineer = () => {
             type: 'input',
             name: 'name',
             message: 'What is the engineer\'s name?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log ("Please enter the engineer's name!");
+                    return false; 
+                }
+            }
         },
         {
             type: 'input',
             name: 'id',
             message: 'What is the engineer\'s id?',
+            validate: idInput => {
+                if (!idInput) {
+                    console.log ("Please enter the engineer's ID!");
+                    return false; 
+                }  else if  (isNaN(idInput)) {
+                    console.log ("ID should be a number!")
+                    return false; 
+                } else {
+                    return true;
+                }
+            }
         },
         {
             type: 'input',
             name: 'email',
             message: 'What is the engineer\'s email address?',
+            validate: email => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+                if (valid) {
+                    return true;
+                } else {
+                    console.log ('Please enter a valid email!')
+                    return false; 
+                }
+            }
         },
         {
             type: 'input',
             name: 'github',
             message: 'What is the engineer\'s GitHub username?',
+            validate: githubInput => {
+                if (githubInput ) {
+                    return true;
+                } else {
+                    console.log ("Please enter the engineer's github username!")
+                }
+            }
         },
         {
             type: 'list',
@@ -130,22 +204,58 @@ const addIntern = () => {
         {
             type: 'input',
             name: 'name',
-            message: 'What is the intern\'s name?'
+            message: 'What is the intern\'s name?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log ("Please enter the intern's name!");
+                    return false; 
+                }
+            }
         },
         {
             type: 'input',
             name: 'id',
-            message: 'What is the intern\'s id?'
+            message: 'What is the intern\'s id?',
+            validate: idInput => {
+                if (!idInput) {
+                    console.log ("Please enter the intern's ID!");
+                    return false; 
+                }  else if  (isNaN(idInput)) {
+                    console.log ("ID should be a number!")
+                    return false; 
+                } else {
+                    return true;
+                }
+            }
         },
         {
             type: 'input',
             name: 'email',
-            message: 'What is the intern\'s email address?'
+            message: 'What is the intern\'s email address?',
+            validate: email => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+                if (valid) {
+                    return true;
+                } else {
+                    console.log ('Please enter a valid email!')
+                    return false; 
+                }
+            }
         },
         {
             type: 'input',
             name: 'school',
-            message: 'What is the intern\'s school?'
+            message: 'What is the intern\'s school?',
+            validate: schoolInput => {
+                if (schoolInput) {
+                    return true;
+                } else {
+                    console.log ("Please enter the intern's school!");
+                    return false; 
+                }
+            }
         },
         {
             type: 'list',
@@ -183,10 +293,5 @@ function writeToFile(filename, data) {
     });
 };
 
-//WHEN I click on an email address in the HTML
-//THEN my default email program opens and populates the TO field of the email with the address
-
-//WHEN I click on the GitHub username
-//THEN that GitHub profile opens in a new tab
 
 //Finally, although it’s not a requirement, consider adding validation to ensure that user input is in the proper format.
