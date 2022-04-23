@@ -30,7 +30,7 @@ describe("Intern", () => {
   describe("getId", () => {
     it("Should return the object's id property", () => {
         const intern = new Intern("Seven Dwarfs", 4, "sevendwarfs@gmail.com", "University of Forest");
-        expect(intern.getID()).toEqual(4);
+        expect(intern.getId()).toEqual(4);
     });
   });
 

@@ -31,7 +31,7 @@ describe("Manager", () => {
   describe("getId", () => {
     it("Should return the object's id property", () => {
         const manager = new Manager("Evil Queen", 3, "evilqueen@gmail.com", 66);
-        expect(manager.getID()).toEqual(3);
+        expect(manager.getId()).toEqual(3);
     });
   });
 
