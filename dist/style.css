@@ -31,8 +31,9 @@ body {
     box-shadow: 5px 3px 9px 1px #736946;
 }
 
+/*different header color for each employee type*/
 .manager-header {
-    background: rgb(32, 137, 166);
+    background: rgb(33, 138, 167)
 }
 
 .engineer-header {
