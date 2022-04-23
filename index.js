@@ -9,10 +9,10 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
 // team array
-const team = [];
+var team = [];
 
 // link to page creation
-const generateTeam = require('./src/template');
+const generateHTML = require('./src/template');
 
 //WHEN I start the application
 //THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
@@ -70,7 +70,7 @@ const addManager = () => {
                 addIntern();
                 break;
             default: 
-            writeToFile('dist/index.html', generateTeam(team))
+            writeToFile('dist/index.html', generateHTML(team))
         }
     });
 }
@@ -118,7 +118,7 @@ const addEngineer = () => {
                 addIntern();
                 break;
             default: 
-            writeToFile('dist/index.html', generateTeam(team))
+            writeToFile('dist/index.html', generateHTML(team))
         }
     })
 }
@@ -165,7 +165,7 @@ const addIntern = () => {
                 addIntern();
                 break;
             default:
-                writeToFile('dist/index.html', generateTeam(team))
+                writeToFile('dist/index.html', generateHTML(team))
         }
     })
 }

@@ -5,8 +5,8 @@ const Intern = require('../lib/Intern')
 const Employee = require('../lib/Intern')
 
 //function to write the html page
-function generateHTML (team) {
-    `
+const generateHTML =(team) => 
+     `
     <!DOCTYPE html>
     <html lang="en">
     
@@ -41,12 +41,61 @@ function generateHTML (team) {
     
     </html>
     `
-}
+
 //function to write manager card
+const createManagerCard = (Manager) => 
+`
+<div class="card employee-card mr-4 ml-4 mb-3">
+    <div class="card-header text-center">
+        <h2 class="card-title">${Manager.getName()}</h2>
+        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${Manager.getRole()}</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: ${Manager.getId()}</li>
+            <li class="list-group-item">Email: <a href="mailto:${Manager.getEmail()}">${Manager.getEmail()}</a></li>
+            <li class="list-group-item">Office number: ${Manager.getOfficeNumber()}</li>
+        </ul>
+    </div>
+</div>
+    `
 
 //function to write engineer card
+const createEngineerCard = (Engineer) => 
+    `
+    <div class="card employee-card mr-4 ml-4 mb-3">
+        <div class="card-header text-center">
+            <h2 class="card-title">${Engineer.getName()}</h2>
+            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${Engineer.getRole()}</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: ${Engineer.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${Engineer.getEmail()}">${Engineer.getEmail()}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${Engineer.getGithub()}" target="_blank"
+                rel="noopener noreferrer">${Engineer.getGithub()}</a></li>
+            </ul>
+        </div>
+    </div>
+        `
 
 //function to write intern card
+const createInternCard = (Intern) => 
+    `
+    <div class="card employee-card mr-4 ml-4 mb-3">
+        <div class="card-header text-center">
+            <h2 class="card-title">${Intern.getName()}</h2>
+            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${Intern.getRole()}</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: ${Intern.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${Intern.getEmail()}">${Intern.getEmail()}</a></li>
+                <li class="list-group-item">School: ${Intern.getSchool()}</li>
+            </ul>
+        </div>
+    </div>
+        `
 
 //function to generate employee card
 function createCards(team) {
@@ -56,15 +105,15 @@ function createCards(team) {
       switch(thisEmployee.getRole()) {
         case 'Manager':
           const manager = new Manager(thisEmployee.id, thisEmployee.name, thisEmployee.email, thisEmployee.officeNumber);
-          cards.push(generateManagerCard(manager));
+          cards.push(createManagerCard(manager));
           break;
         case 'Engineer':
           const engineer = new Engineer(thisEmployee.id, thisEmployee.name, thisEmployee.email, thisEmployee.github);
-          cards.push(generateEngineerCard(engineer));
+          cards.push(createEngineerCard(engineer));
           break;
         case 'Intern':
           const intern = new Intern(thisEmployee.id, thisEmployee.name, thisEmployee.email, thisEmployee.school);
-          cards.push(generateInternCard(intern));
+          cards.push(createInternCard(intern));
           break;
       }
     }
