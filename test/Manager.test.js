@@ -47,7 +47,7 @@ describe("Manager", () => {
   describe("getOffice", () => {
     it("Should return the object's officeNumber property", () => {
         const manager = new Manager("Evil Queen", 3, "evilqueen@gmail.com", 66);
-        expect(manager.getOffice()).toEqual(20);
+        expect(manager.getOfficeNumber()).toEqual(66);
     });
   });
 

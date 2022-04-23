@@ -14,7 +14,7 @@ describe("Intern", () => {
         expect(intern.id).toEqual(4);
         expect(intern.email).toEqual("sevendwarfs@gmail.com");
         //add a school check
-        expect(intern.officeNumber).toEqual("University of Washington");
+        expect(intern.school).toEqual("University of Forest");
     });
   });
 
@@ -22,7 +22,7 @@ describe("Intern", () => {
   describe("getName", () => {
     it("Should return the object's name property", () => {
         const intern = new Intern("Seven Dwarfs", 4, "sevendwarfs@gmail.com", "University of Forest");
-        expect(intern.getName()).toEqual("Apple Sweet");
+        expect(intern.getName()).toEqual("Seven Dwarfs");
     });
   });
 
