@@ -46,7 +46,7 @@ const generateHTML =(team) =>
 const createManagerCard = (Manager) => 
 `
 <div class="card employee-card mr-4 ml-4 mb-3">
-    <div class="card-header text-center">
+    <div class="manager-header text-center">
         <h2 class="card-title">${Manager.getName()}</h2>
         <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${Manager.getRole()}</h3>
     </div>
@@ -64,9 +64,9 @@ const createManagerCard = (Manager) =>
 const createEngineerCard = (Engineer) => 
     `
     <div class="card employee-card mr-4 ml-4 mb-3">
-        <div class="card-header text-center">
+        <div class="engineer-header text-center">
             <h2 class="card-title">${Engineer.getName()}</h2>
-            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${Engineer.getRole()}</h3>
+            <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${Engineer.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
@@ -83,9 +83,9 @@ const createEngineerCard = (Engineer) =>
 const createInternCard = (Intern) => 
     `
     <div class="card employee-card mr-4 ml-4 mb-3">
-        <div class="card-header text-center">
+        <div class="intern-header text-center">
             <h2 class="card-title">${Intern.getName()}</h2>
-            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${Intern.getRole()}</h3>
+            <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${Intern.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
