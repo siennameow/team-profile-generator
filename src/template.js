@@ -31,10 +31,8 @@ const generateHTML =(team) =>
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="team-area col-12 d-flex justify-content-center mt-5">
+            <div class="row col-12  justify-content-center  mt-5">
                 ${createCards(team)}
-                </div>
             </div>
         </div>
     </body>
