@@ -23,7 +23,12 @@ Link to the demo video: https://drive.google.com/file/d/1hCZ1IJCcFcbhT2oLA4nlnbv
 
 This is a sample Team page for a project generated using this application
 
+![Screen Shot 2022-04-23 at 5 30 07 PM](https://user-images.githubusercontent.com/101283174/164950802-79310d69-3828-43b2-b77f-d885a2443a47.png)
+
 Below is the video showing the functionality of the application:
+
+https://user-images.githubusercontent.com/101283174/164950799-64919c62-c889-4e93-a5df-2581f8296ef2.mp4
+
 
 ## Installation 🗳 
 
