@@ -1,5 +1,5 @@
 # Team Profile Generator
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/siennameow/team-profile-generator/blob/main/LICENSE)
 
 ## Description 📝 
 
@@ -61,9 +61,10 @@ https://user-images.githubusercontent.com/101283174/164950799-64919c62-c889-4e93
     - Manager - office number
     - Engineer - GitHub username
     - Intern - school
-- Then a team.html page will be generated in the output directory, that displays a nicely formatted team roster.
+- Then a index.html page will be generated in the dist directory, that displays a nicely formatted team roster.
 
 ## License 🚀
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/siennameow/team-profile-generator/blob/main/LICENSE)
 
 ## Technologies 🔧
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
