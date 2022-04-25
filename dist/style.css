@@ -1,3 +1,4 @@
+
 h1 {
     Font-Family: 'Merriweather', Serif;
     font-size: 45px;
@@ -14,11 +15,13 @@ span {
     opacity: 0.6;
 }
 
+body, html {
+    height: 100%;
+}
+
 body {
     Font-Family: 'Muli', Sans-Serif;
-    background-image:linear-gradient(to right, rgba(255,255,255, 0.5) 0 100%), url("https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?t=st=1650744303~exp=1650744903~hmac=930aa04594fdc5909caa92a6ba9b95cb55fdb412e3582c5cf43fb7da4abe5275&w=1380");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color:antiquewhite;
     height: 100%;
     color: #f2f0dc;
 }
