@@ -35,9 +35,7 @@ https://user-images.githubusercontent.com/101283174/164950799-64919c62-c889-4e93
 - Download or clone repository
 - Node.js is required to run the application
 - npm install to install the required npm packages
-    - `node i inquirer`
-    - `node i fs `
-    - `node i jest`
+    - ` npm i `
 
 ## Usage 💻 
 
