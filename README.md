@@ -1,4 +1,4 @@
-# Team Profile Generator
+# Team Ace
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/siennameow/team-profile-generator/blob/main/LICENSE)
 
 ## Description 📝 
